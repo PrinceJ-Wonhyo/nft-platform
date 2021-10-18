@@ -37,14 +37,14 @@ const Package = () => {
       id: 2,
       src: "./assets/Special_pack.png",
       description: "Mock Sample Images",
-      width: "819",
+      width: "900",
       height: "401",
     },
     {
       id: 3,
       src: "./assets/Base_pack.png",
       description: "Mock Sample Images",
-      width: "401",
+      width: "450",
       height: "401",
     },
   ];
