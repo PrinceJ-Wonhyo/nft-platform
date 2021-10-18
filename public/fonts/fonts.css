@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'monument_extreg';
+    src: url('./monumentextended-regular-webfont.woff2') format('woff2'),
+         url('./monumentextended-regular-webfont.woff') format('woff'),
+         url('./MonumentExtended-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'monument_extultbold';
+    src: url('./monumentextended-ultrabold-webfont.woff2') format('woff2'),
+         url('./monumentextended-ultrabold-webfont.woff') format('woff'),
+         url('./MonumentExtended-Ultrabold.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'interreg';
+    src: url('./inter-variablefont_slntwght-webfont.woff2') format('woff2'),
+         url('./inter-variablefont_slntwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

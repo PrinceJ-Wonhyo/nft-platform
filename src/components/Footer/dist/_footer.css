@@ -1,0 +1,35 @@
+.footer, .clickable, .external-links {
+  background-color: #212127;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "interreg" !important;
+  font-size: 0.6rem;
+  justify-content: space-between;
+  padding: 0.3rem 2rem;
+  font-weight: 400;
+}
+.footer .internal-links ul, .clickable .internal-links ul, .external-links .internal-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.footer .internal-links ul:first-child, .clickable .internal-links ul:first-child, .external-links .internal-links ul:first-child {
+  justify-content: flex-end;
+}
+.footer .internal-links ul li, .clickable .internal-links ul li, .external-links .internal-links ul li {
+  padding-right: 1rem;
+}
+.footer .internal-links ul li a, .clickable .internal-links ul li a, .external-links .internal-links ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  padding: 3rem;
+}
+
+.external-links img {
+  margin-right: 1rem;
+}

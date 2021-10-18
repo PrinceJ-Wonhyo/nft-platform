@@ -1,0 +1,99 @@
+.main-view {
+  position: relative;
+}
+.main-view .banner {
+  padding-top: 1px;
+  display: grid;
+  grid-template-areas: "textblock imageblock";
+  grid-template-columns: 55% 45%;
+  column-gap: 28px;
+  padding-right: 32px;
+  background: url(./Banner_background.png);
+  background-color: black;
+  background-size: 80%;
+  background-position: left center;
+  padding-bottom: 7rem;
+}
+.main-view .banner .textblock {
+  grid-area: textblock;
+  margin: 0 10rem;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-view .banner .textblock header {
+  background-color: black;
+  max-width: 480px;
+}
+.main-view .banner .textblock header h1 {
+  font-size: 4rem;
+}
+.main-view .banner .textblock header::after {
+  position: absolute;
+  top: 6rem;
+  left: 30rem;
+  content: url(./Asterisk_short.png);
+  transform: scale(0.6);
+  color: white;
+}
+.main-view .banner .textblock .profile-icons {
+  margin-top: 20px;
+  justify-self: flex-start;
+  align-self: initial;
+}
+.main-view .banner .textblock .profile-icons img {
+  margin-left: -10px;
+}
+.main-view .banner .textblock .profile-icons img:first-child {
+  margin-left: 0;
+}
+.main-view .banner .imageblock {
+  justify-self: center;
+  align-self: center;
+  background-color: black;
+}
+.main-view .offering {
+  background-color: black;
+  border: 5px white solid;
+  width: 85%;
+  position: absolute;
+  bottom: -12.5%;
+  left: 7.5%;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0;
+  height: auto;
+}
+.main-view .offering ul {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-content: center;
+  text-align: center;
+}
+.main-view .offering ul li {
+  transition: all 0.2s linear;
+}
+.main-view .offering ul li a {
+  text-decoration: none;
+  color: white;
+}
+.main-view .offering ul li:hover {
+  transform: scale(1.1);
+}
+.main-view .offering ul li p {
+  font-family: "interreg" !important;
+  font-weight: 800;
+  margin: 0;
+  padding-top: 2rem;
+}
+.main-view .offering ul li h4 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+.main-view .offering ul li:last-child img {
+  margin-top: 0.5rem;
+}

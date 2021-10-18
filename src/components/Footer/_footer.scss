@@ -1,0 +1,36 @@
+.footer, .clickable, .external-links{
+    background-color: #212127;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'interreg' !important;
+    font-size: 0.6rem;
+    justify-content: space-between;
+    padding: 0.3rem 2rem;
+    font-weight: 400;
+    .internal-links ul{
+        list-style: none;
+        display: flex;
+    flex-direction: row;
+        &:first-child{
+            justify-content: flex-end;
+        }
+        li{
+            padding-right: 1rem;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        
+    }
+}
+.footer{
+    padding: 3rem;
+}
+.external-links{
+    img{
+        margin-right: 1rem;
+    }
+}

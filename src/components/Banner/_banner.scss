@@ -1,0 +1,111 @@
+.main-view{
+    position: relative;
+    .banner{
+        padding-top: 1px;
+        display: grid;
+        grid-template-areas: "textblock imageblock";
+        grid-template-columns: 55% 45%;
+        column-gap: 28px;
+        padding-right: 32px;
+        background: url(./Banner_background.png);
+        background-color: black;
+        background-size: 80%;
+        background-position: left center;
+        padding-bottom: 7rem;
+        .textblock{
+            grid-area: textblock;
+            margin: 0 10rem;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            header{
+                background-color: black;
+                max-width: 480px;
+                h1{
+                    font-size: 4rem;
+                }
+                &::after{
+                    position: absolute;
+                    top: 6rem;
+                    left: 30rem;
+                    content: url(./Asterisk_short.png);
+                    transform: scale(0.6);
+                    color: white;
+                }
+            }
+            .profile-icons{
+                margin-top: 20px;
+                justify-self: flex-start;
+                align-self:initial;
+                img{
+                    margin-left: -10px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+            
+        }
+        .imageblock{
+            justify-self: center;
+            align-self: center;
+            background-color: black;
+        }
+    }.button-link{
+        text-decoration: none;
+        color: white;
+        background-color: #325eff;
+                    padding: 0.75rem 1.75rem;
+                    border-radius: 2px;
+                    width: 50%;
+                    text-align: center;
+    }
+    .offering{
+        background-color: black;
+        border: 5px white solid;
+        width: 85%;
+        position: absolute;
+        bottom: -12.5%;
+        left: 7.5%;
+        z-index: 1;
+        overflow: hidden;
+        padding: 0;
+        height: auto;
+        ul{
+            padding: 0 0 1rem;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            align-content: center;
+            text-align: center;
+            li{
+                transition: all 0.2s linear;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                &:hover{
+            transform: scale(1.1);
+        }
+                p{
+                    font-family: 'interreg' !important;
+                    font-weight: 800;
+                    margin: 0;
+                    padding-top: 2rem;
+                }
+                h4{
+                    margin: 0 0 1rem;
+                    font-size: 2rem;
+                }
+                &:last-child{
+                    img{
+                        margin-top: 0.5rem;
+                    }  
+                }
+                
+            }
+        }
+    }
+}

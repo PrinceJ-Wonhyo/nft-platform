@@ -1,0 +1,32 @@
+.shop{
+    background-image: url(./Shop_background.png);
+    margin: 0;
+    padding: 10rem 15% 3rem;
+    section{
+        a{
+            color: white;
+        }
+        .packages{
+            margin-top: 5rem;
+            width: 85%;
+        display: grid;
+  grid-template-columns: 819px 401px;
+  grid-template-rows: auto;
+  gap: 20px;
+  grid-template-areas:
+    "top top"
+    "left right";
+    img{
+        &:first-child{
+            grid-area: "top";
+            grid-column: 1 / 3;
+            justify-self: center;
+        }
+        &:last-child{
+            grid-area: "right";
+            justify-self: center;
+        }
+    }
+        }
+    }
+}

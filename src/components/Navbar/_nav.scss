@@ -1,0 +1,77 @@
+.desktop-nav {
+    width: 100%;
+    position: fixed;
+    background-color: #212127;
+    font-size: 0.7rem;
+    z-index: 10;
+    font-family: 'interreg' !important;
+    font-weight: 900 !important;
+    margin: 0;
+    padding: 0;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        div {
+            display: flex;
+            align-items: center;
+
+            ul {
+                li {
+                    a {
+                        overflow: hidden;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            height: 2px;
+                            margin: 0;
+                            left: 0;
+                            width: 0;
+                            bottom: -0.5rem;
+                            background-color: white;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            &::after {
+                                opacity: 1;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                text-decoration: none;
+                margin-left: 2rem;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    position: relative;
+                }
+            }
+        }
+
+        .login-btn {
+            li {
+                &:last-child {
+                    background-color: #325eff;
+                    padding: 0.5rem 1.75rem;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+}
