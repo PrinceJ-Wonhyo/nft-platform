@@ -14,10 +14,10 @@ function App() {
       <main>
         <Banner />
         <Shop />
-        
+        <Marketplace />
       </main>
       <footer>
-       <Footer />
+        <Footer />
       </footer>
     </div>
   );
