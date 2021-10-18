@@ -1,44 +1,63 @@
 .main-view{
     position: relative;
+    font-family: 'interreg';
+    text-transform: uppercase;
+    font-weight: 700;
     .banner{
-        padding-top: 1px;
+        padding-top: 1.5rem;
         display: grid;
         grid-template-areas: "textblock imageblock";
         grid-template-columns: 55% 45%;
-        column-gap: 28px;
+        column-gap: 2rem;
         padding-right: 32px;
         background: url(./Banner_background.png);
         background-color: black;
-        background-size: 80%;
+        background-size: 100%;
         background-position: left center;
-        padding-bottom: 7rem;
+        padding: 0;
         .textblock{
             grid-area: textblock;
-            margin: 0 10rem;
-            padding: 0;
+            margin: 0 7rem;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             header{
                background-color: transparent;
-                max-width: 480px;
+               max-width: 400px;
                 h1{
-                    font-size: 4rem;
+                    font-size: 3rem;
+                    font-weight: 400;
                 }
                 &::after{
                     position: absolute;
-                    top: 6rem;
-                    left: 30rem;
+                    top: 12rem;
+                    left: 29rem;
                     content: url(./Asterisk_short.png);
                     transform: scale(0.6);
                     color: white;
                 }
+                p{
+                    text-transform: none;
+                    letter-spacing: 1px;
+                    line-height: 1.5;
+                    font-size: 0.85rem;
+                    padding-bottom: 1rem;
+                }
+            }
+            .button-link{
+                text-decoration: none;
+                color: white;
+                background-color: #325eff;
+                padding: 0.75rem 1.25rem;
+                border-radius: 2px;
+                width: 40%;
+                text-align: center;
+                font-size: 0.63rem;
+                margin-bottom: 1.5rem;
             }
             .profile-icons{
-                margin-top: 20px;
-                justify-self: flex-start;
-                align-self:initial;
+                padding-bottom: 1rem;
                 img{
                     margin-left: -10px;
                     &:first-child{
@@ -46,21 +65,19 @@
                     }
                 }
             }
+            footer{
+                font-size: 0.63rem;
+
+            }
             
         }
         .imageblock{
+            display: flex;
             justify-self: center;
             align-self: center;
             background-color: transparent;
+            padding-right: 12rem;
         }
-    }.button-link{
-        text-decoration: none;
-        color: white;
-        background-color: #325eff;
-                    padding: 0.75rem 1.75rem;
-                    border-radius: 2px;
-                    width: 50%;
-                    text-align: center;
     }
     .offering{
         background-color: black;
@@ -72,9 +89,8 @@
         z-index: 1;
         overflow: hidden;
         padding: 0;
-        height: auto;
         ul{
-            padding: 0 0 1rem;
+            padding-bottom: 0.6rem;
             display: flex;
             justify-content: space-around;
             list-style: none;
@@ -90,13 +106,11 @@
             transform: scale(1.1);
         }
                 p{
-                    font-family: 'interreg' !important;
-                    font-weight: 800;
-                    margin: 0;
-                    padding-top: 2rem;
+                    padding-top: 1rem;
+                    font-size: 0.63rem;
                 }
-                h4{
-                    margin: 0 0 1rem;
+                h3{
+                    margin-top: 1rem;
                     font-size: 2rem;
                 }
                 &:last-child{

@@ -12,16 +12,16 @@ export default function Banner() {
         <section className="textblock">
           <header>
             <h1>Own the best NFT moments</h1>
-            <h2>
+            <p>
               Collect and trade officially licensed NFT KOREA digital
               collectibles
-            </h2>
+            </p>
           </header>
           <Link exact to="/" className="button-link">
             Start My Collection
           </Link>
           <NFTFans />
-          <footer>600,000+ NFT fans own a moment</footer>
+          <footer><small>600,000+ NFT fans own a moment</small></footer>
         </section>
         <section className="imageblock">
           <img
@@ -68,6 +68,7 @@ const NFTFans = () => {
     </div>
   );
 };
+
 const AboutNft = () => {
   const offering = [
     {
@@ -107,7 +108,7 @@ const AboutNft = () => {
               <li key={id}>
                 <Link exact to="/">
                   <p>{tagline}</p>
-                  <h4>{item}</h4>
+                  <h3>{item}</h3>
                   <img
                     src={src}
                     alt={description}
