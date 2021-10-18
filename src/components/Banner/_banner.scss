@@ -21,7 +21,7 @@
             flex-direction: column;
             justify-content: center;
             header{
-                background-color: black;
+               background-color: transparent;
                 max-width: 480px;
                 h1{
                     font-size: 4rem;
@@ -51,7 +51,7 @@
         .imageblock{
             justify-self: center;
             align-self: center;
-            background-color: black;
+            background-color: transparent;
         }
     }.button-link{
         text-decoration: none;
