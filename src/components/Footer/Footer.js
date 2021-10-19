@@ -49,9 +49,15 @@ const FooterLinks = () => {
         </ul>
       </div>
       <div className="external-links">
-        <img src={src} alt="Mock Sample Images" width="50" height="50" />
-        <img src={src} alt="Mock Sample Images" width="50" height="50" />
-        <img src={src} alt="Mock Sample Images" width="50" height="50" />
+        <Link exact to="/">
+          <img src={src} alt="Mock Sample" width="50" height="50" />
+        </Link>
+        <Link exact to="/">
+          <img src={src} alt="Mock Sample" width="50" height="50" />
+        </Link>
+        <Link exact to="/">
+          <img src={src} alt="Mock Sample" width="50" height="50" />
+        </Link>
       </div>
     </div>
   );
