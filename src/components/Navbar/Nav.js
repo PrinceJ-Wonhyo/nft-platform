@@ -5,7 +5,7 @@ import styles from "./_nav.scss";
 
 const cx = classNames.bind(styles);
 
-export default function DesktopNav() {
+function DesktopNav() {
   return (
     <div className={cx("desktop-nav")}>
       <nav className="nav-bar">
@@ -73,3 +73,5 @@ const LoginBtn = () => {
     </ul>
   );
 };
+
+export default DesktopNav;
