@@ -6,97 +6,127 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "monument_extreg" !important;
-  font-size: 16px;
-  letter-spacing: 2.5px;
-  line-height: 1;
-}
-body p {
   font-family: "interreg" !important;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 * {
   box-sizing: inherit;
+}
+* ul, * li, * a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+* h1, * h2, * h3, * h4 {
+  font-family: "monument_extreg";
+  margin: 0;
+}
+* h1 {
+  font-size: 3rem;
+}
+* h2 {
+  font-size: 2.5rem;
+}
+* h3 {
+  font-size: 2rem;
+}
+* p {
+  letter-spacing: 1px;
+}
+
+.nav-bar, .nav-logo, .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .desktop-nav {
   width: 100%;
   position: fixed;
   background-color: #212127;
-  font-size: 0.7rem;
+  font-size: 0.63rem;
   z-index: 10;
   font-family: "interreg" !important;
   font-weight: 900 !important;
   margin: 0;
   padding: 0;
 }
-.desktop-nav nav {
-  display: flex;
-  flex-direction: row;
+.desktop-nav .nav-bar {
   align-items: center;
   justify-content: space-around;
 }
-.desktop-nav nav div {
-  display: flex;
-  align-items: center;
+.desktop-nav .nav-bar .nav-logo {
+  padding: 0 1rem;
 }
-.desktop-nav nav div ul li a {
+.desktop-nav .nav-bar .nav-logo .logo {
+  justify-content: space-between;
+}
+.desktop-nav .nav-bar .nav-logo .logo img {
+  margin-right: 0.5rem;
+}
+.desktop-nav .nav-bar .nav-options li a {
   overflow: hidden;
 }
-.desktop-nav nav div ul li a::after {
+.desktop-nav .nav-bar .nav-options li a::after {
   content: "";
   position: absolute;
-  height: 2px;
+  height: 3px;
   margin: 0;
-  left: 0;
+  left: 50%;
   width: 0;
   bottom: -0.5rem;
-  background-color: white;
-  transition: all 0.3s ease-in-out;
+  background-color: #325eff;
+  transition: all 0.2s ease-in-out;
 }
-.desktop-nav nav div ul li a:hover::after, .desktop-nav nav div ul li a:focus::after {
+.desktop-nav .nav-bar .nav-options li a:hover::after, .desktop-nav .nav-bar .nav-options li a:focus::after {
   opacity: 1;
   width: 100%;
+  left: 0;
 }
-.desktop-nav nav ul {
-  list-style: none;
-}
-.desktop-nav nav ul li {
+.desktop-nav .nav-bar .login-btn li {
   display: inline-block;
   text-decoration: none;
   margin-left: 2rem;
 }
-.desktop-nav nav ul li a {
+.desktop-nav .nav-bar .login-btn li a {
   text-decoration: none;
   color: white;
-  position: relative;
 }
-.desktop-nav nav .login-btn li:last-child {
+.desktop-nav .nav-bar .login-btn li a:hover, .desktop-nav .nav-bar .login-btn li a:focus {
+  color: #909093;
+}
+.desktop-nav .nav-bar .login-btn li:last-child {
   background-color: #325eff;
-  padding: 0.5rem 1.75rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 2px;
 }
 
 .main-view {
   position: relative;
+  font-family: "interreg";
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .main-view .banner {
-  padding-top: 1px;
+  padding-top: 1.5rem;
   display: grid;
   grid-template-areas: "textblock imageblock";
   grid-template-columns: 55% 45%;
-  column-gap: 28px;
+  column-gap: 2rem;
   padding-right: 32px;
   background: url(./Banner_background.png);
   background-color: black;
-  background-size: 80%;
+  background-size: 100%;
   background-position: left center;
-  padding-bottom: 7rem;
+  padding: 0;
 }
 .main-view .banner .textblock {
   grid-area: textblock;
-  margin: 0 10rem;
-  padding: 0;
+  margin: 0 7rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -104,23 +134,40 @@ body p {
 }
 .main-view .banner .textblock header {
   background-color: transparent;
-  max-width: 480px;
+  max-width: 400px;
 }
 .main-view .banner .textblock header h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  font-weight: 400;
 }
 .main-view .banner .textblock header::after {
   position: absolute;
-  top: 6rem;
-  left: 30rem;
+  top: 12rem;
+  left: 29rem;
   content: url(./Asterisk_short.png);
   transform: scale(0.6);
   color: white;
 }
+.main-view .banner .textblock header p {
+  text-transform: none;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  padding-bottom: 1rem;
+}
+.main-view .banner .textblock .button-link {
+  text-decoration: none;
+  color: white;
+  background-color: #325eff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 2px;
+  width: 40%;
+  text-align: center;
+  font-size: 0.63rem;
+  margin-bottom: 1.5rem;
+}
 .main-view .banner .textblock .profile-icons {
-  margin-top: 20px;
-  justify-self: flex-start;
-  align-self: initial;
+  padding-bottom: 1rem;
 }
 .main-view .banner .textblock .profile-icons img {
   margin-left: -10px;
@@ -128,19 +175,15 @@ body p {
 .main-view .banner .textblock .profile-icons img:first-child {
   margin-left: 0;
 }
+.main-view .banner .textblock footer {
+  font-size: 0.63rem;
+}
 .main-view .banner .imageblock {
+  display: flex;
   justify-self: center;
   align-self: center;
   background-color: transparent;
-}
-.main-view .button-link {
-  text-decoration: none;
-  color: white;
-  background-color: #325eff;
-  padding: 0.75rem 1.75rem;
-  border-radius: 2px;
-  width: 50%;
-  text-align: center;
+  padding-right: 12rem;
 }
 .main-view .offering {
   background-color: black;
@@ -152,10 +195,9 @@ body p {
   z-index: 1;
   overflow: hidden;
   padding: 0;
-  height: auto;
 }
 .main-view .offering ul {
-  padding: 0 0 1rem;
+  padding-bottom: 0.6rem;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -173,13 +215,11 @@ body p {
   transform: scale(1.1);
 }
 .main-view .offering ul li p {
-  font-family: "interreg" !important;
-  font-weight: 800;
-  margin: 0;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.63rem;
 }
-.main-view .offering ul li h4 {
-  margin: 0 0 1rem;
+.main-view .offering ul li h3 {
+  margin-top: 1rem;
   font-size: 2rem;
 }
 .main-view .offering ul li:last-child img {
