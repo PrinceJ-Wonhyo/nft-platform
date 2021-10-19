@@ -1,4 +1,7 @@
-.nav-bar, .nav-logo, .logo, .nav-options{
+.nav-bar,
+.nav-logo,
+.logo,
+.nav-options {
     display: flex !important;
     flex-direction: row !important;
     align-items: center;
@@ -14,25 +17,37 @@
     font-weight: 900 !important;
     margin: 0;
     padding: 0;
+
     .nav-bar {
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin: 0 8rem;
+
         .nav-logo {
             padding: 0 1rem;
-            .logo{
-            justify-content: space-between;
-            img{
-                margin-right: 0.5rem;
-            }
+            margin: 0;
+
+            .logo {
+                justify-content: space-between;
+
+                img {
+                    margin-right: 0.5rem 0;
+                }
             }
         }
-        .nav-options{
+
+        .nav-options {
+            margin: 0;
+            padding: 0;
+
             li {
                 .nav-clickable {
                     overflow: hidden;
-                    margin: 0 1rem; 
+                    margin: 0 1rem;
                     position: relative;
                     transition: all 0.2s ease-in-out;
+                    left: -17rem;
+
                     &::after {
                         content: '';
                         position: absolute;
@@ -43,6 +58,7 @@
                         bottom: -0.5rem;
                         background-color: #325eff;
                     }
+
                     &:hover,
                     &:focus {
                         &::after {
@@ -50,22 +66,27 @@
                             width: 100%;
                             left: 0;
                         }
-                    }  
+                    }
                 }
             }
         }
+
         .login-btn {
             li {
                 display: inline-block;
                 text-decoration: none;
                 margin-left: 2rem;
+
                 a {
                     text-decoration: none;
                     color: white;
-                    &:hover, &:focus{
+
+                    &:hover,
+                    &:focus {
                         color: #909093;
                     }
                 }
+
                 &:last-child {
                     background-color: #325eff;
                     padding: 0.5rem 1.25rem;

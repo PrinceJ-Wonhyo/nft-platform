@@ -1,23 +1,28 @@
 .shop {
     background-image: url(./Shop_background.png);
     padding: 10rem 7.5% 3rem;
+
     section {
         h2 {
             font-size: 2.5rem;
             text-transform: uppercase;
         }
+
         p {
             line-height: 1.5;
             font-size: 0.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
+
         a {
             color: white;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.63rem;
+            text-decoration: underline;
         }
+
         .packages {
             margin: 2rem 7.5% 0;
             width: 85%;
@@ -28,12 +33,14 @@
             grid-template-areas:
                 "top top"
                 "left right";
+
             img {
                 &:first-child {
                     grid-area: "top";
                     grid-column: 1 / 3;
                     justify-self: center;
                 }
+
                 &:last-child {
                     grid-area: "right";
                     justify-self: center;
