@@ -44,22 +44,22 @@ const NFTFans = () => {
     {
       id: 1,
       src: "./assets/Profile_icon_1.png",
-      description: "Mock Sample Images",
+      description: "Mock Sample",
     },
     {
       id: 2,
       src: "./assets/Profile_icon_2.png",
-      description: "Mock Sample Images",
+      description: "Mock Sample",
     },
     {
       id: 3,
       src: "./assets/Profile_icon_3.png",
-      description: "Mock Sample Images",
+      description: "Mock Sample",
     },
     {
       id: 4,
       src: "./assets/Profile_icon_4.png",
-      description: "Mock Sample Images",
+      description: "Mock Sample",
     },
   ];
   return (
@@ -78,7 +78,7 @@ const AboutNft = () => {
       tagline: "Purchase & rip",
       item: "Packs",
       src: "./assets/Card_packs.png",
-      description: "Mock Sample Images",
+      description: "Mock Sample",
       width: "110",
       height: "92.37",
     },
@@ -87,7 +87,7 @@ const AboutNft = () => {
       tagline: "Build an epic",
       item: "Collection",
       src: "./assets/NFTKOREA.png",
-      description: "Mock Sample Images",
+      description: "Mock Sample",
       width: "99",
       height: "99",
     },
@@ -96,7 +96,7 @@ const AboutNft = () => {
       tagline: "Win exclusive",
       item: "Rewards",
       src: "./assets/Challenge_reward.png",
-      description: "Mock Sample Images",
+      description: "Mock Sample",
       width: "165",
       height: "77",
     },

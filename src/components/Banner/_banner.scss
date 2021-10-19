@@ -1,9 +1,10 @@
-.main-view{
+.main-view {
     position: relative;
     font-family: 'interreg';
     text-transform: uppercase;
     font-weight: 700;
-    .banner{
+
+    .banner {
         padding-top: 1.5rem;
         display: grid;
         grid-template-areas: "textblock imageblock";
@@ -15,21 +16,25 @@
         background-size: 100%;
         background-position: left center;
         padding: 0;
-        .textblock{
+
+        .textblock {
             grid-area: textblock;
-            margin: 0 7rem;
+            margin: 0 0 0 9rem;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            header{
-               background-color: transparent;
-               max-width: 400px;
-                h1{
+
+            header {
+                background-color: transparent;
+                max-width: 400px;
+
+                h1 {
                     font-size: 3rem;
                     font-weight: 400;
                 }
-                &::after{
+
+                &::after {
                     position: absolute;
                     top: 12rem;
                     left: 29rem;
@@ -37,7 +42,8 @@
                     transform: scale(0.6);
                     color: white;
                 }
-                p{
+
+                p {
                     text-transform: none;
                     letter-spacing: 1px;
                     line-height: 1.5;
@@ -45,7 +51,8 @@
                     padding-bottom: 1rem;
                 }
             }
-            .button-link{
+
+            .button-link {
                 text-decoration: none;
                 color: white;
                 background-color: #325eff;
@@ -56,22 +63,27 @@
                 font-size: 0.63rem;
                 margin-bottom: 1.5rem;
             }
-            .profile-icons{
+
+            .profile-icons {
                 padding-bottom: 1rem;
-                img{
+
+                img {
                     margin-left: -10px;
-                    &:first-child{
+
+                    &:first-child {
                         margin-left: 0;
                     }
                 }
             }
-            footer{
+
+            footer {
                 font-size: 0.63rem;
 
             }
-            
+
         }
-        .imageblock{
+
+        .imageblock {
             display: flex;
             justify-self: center;
             align-self: center;
@@ -79,7 +91,8 @@
             padding-right: 12rem;
         }
     }
-    .offering{
+
+    .offering {
         background-color: black;
         border: 5px white solid;
         width: 85%;
@@ -89,36 +102,43 @@
         z-index: 1;
         overflow: hidden;
         padding: 0;
-        ul{
+
+        ul {
             padding-bottom: 0.6rem;
             display: flex;
             justify-content: space-around;
             list-style: none;
             align-content: center;
             text-align: center;
-            li{
+
+            li {
                 transition: all 0.2s linear;
-                a{
+
+                a {
                     text-decoration: none;
                     color: white;
                 }
-                &:hover{
-            transform: scale(1.1);
-        }
-                p{
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                p {
                     padding-top: 1rem;
                     font-size: 0.63rem;
                 }
-                h3{
+
+                h3 {
                     margin-top: 1rem;
                     font-size: 2rem;
                 }
-                &:last-child{
-                    img{
+
+                &:last-child {
+                    img {
                         margin-top: 0.5rem;
-                    }  
+                    }
                 }
-                
+
             }
         }
     }
