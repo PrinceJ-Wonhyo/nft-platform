@@ -1,8 +1,9 @@
-.nav-bar, .nav-logo, .logo{
-    display: flex;
-    flex-direction: row;
+.nav-bar, .nav-logo, .logo, .nav-options{
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center;
 }
+
 .desktop-nav {
     width: 100%;
     position: fixed;
@@ -27,8 +28,11 @@
         }
         .nav-options{
             li {
-                a {
+                .nav-clickable {
                     overflow: hidden;
+                    margin: 0 1rem; 
+                    position: relative;
+                    transition: all 0.2s ease-in-out;
                     &::after {
                         content: '';
                         position: absolute;
@@ -38,7 +42,6 @@
                         width: 0;
                         bottom: -0.5rem;
                         background-color: #325eff;
-                        transition: all 0.2s ease-in-out;
                     }
                     &:hover,
                     &:focus {
@@ -47,7 +50,7 @@
                             width: 100%;
                             left: 0;
                         }
-                    }
+                    }  
                 }
             }
         }

@@ -26,7 +26,7 @@ const Logo = () => {
           height="32"
           alt="NFT Korea Logo"
         />
-        <img 
+        <img
           src="./assets/Beta_btn.png"
           width="55"
           height="16"
@@ -46,7 +46,7 @@ const Menu = () => {
         {menuItem.map((item, i) => {
           return (
             <li key={i}>
-              <NavLink exact to={"/" + item}>
+              <NavLink className="nav-clickable" exact to={"/" + item}>
                 {item.toUpperCase()}
               </NavLink>
             </li>
