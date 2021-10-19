@@ -21,7 +21,9 @@ export default function Banner() {
             Start My Collection
           </Link>
           <NFTFans />
-          <footer><small>600,000+ NFT fans own a moment</small></footer>
+          <footer>
+            <small>600,000+ NFT fans own a moment</small>
+          </footer>
         </section>
         <section className="imageblock">
           <img
