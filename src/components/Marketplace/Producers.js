@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
@@ -99,17 +99,17 @@ export default class Producers extends Component {
         <h3>CERTIFIED PRODUCERS</h3>
         <Slider {...settings}>
           {producers.map(({ profileImg, name, user, verified, rating, id }) => (
-            <Link exact to="/">
-            <div className="producer-profiles" key={id}>
-              <img src={profileImg} alt="" width="56" height="56" />
-              <p className="producer-name">{name}</p>
-              <div className="user-status">
-              <p>{user}</p>
-              <img src={verified} alt="" width="12" height="12"/>
+            <Link exact to="/" key={id}>
+              <div className="producer-profiles">
+                <img src={profileImg} alt="" width="56" height="56" />
+                <p className="producer-name">{name}</p>
+                <div className="user-status">
+                  <p>{user}</p>
+                  <img src={verified} alt="" width="12" height="12" />
+                </div>
+                <small>Credit {rating}</small>
               </div>
-              <small>Credit {rating}</small>
-              </div>
-              </Link>
+            </Link>
           ))}
         </Slider>
       </div>

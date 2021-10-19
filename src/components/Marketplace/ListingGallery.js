@@ -7,35 +7,35 @@ const itemProps = [
   {
     id: 0,
     src: "./assets/NFTKOREA.png",
-    alt: "Mock Sample Images",
+    alt: "Mock Sample",
     width: 450,
     height: 500,
   },
   {
     id: 1,
     src: "./assets/DZCUR-KR-01.png",
-    alt: "Mock Sample Images",
+    alt: "Mock Sample",
     width: 450,
     height: 500,
   },
   {
     id: 2,
     src: "./assets/DZCN-KR-07.png",
-    alt: "Mock Sample Images",
+    alt: "Mock Sample",
     width: 450,
     height: 500,
   },
   {
     id: 3,
     src: "./assets/DZCAR-01.png",
-    alt: "Mock Sample Images",
+    alt: "Mock Sample",
     width: 450,
     height: 500,
   },
   {
     id: 4,
     src: "./assets/DZCN-KR-01.png",
-    alt: "Mock Sample Images",
+    alt: "Mock Sample",
     width: 450,
     height: 500,
   },
@@ -93,7 +93,7 @@ export default class ListingGallery extends Component {
                 src={"./assets/left-arrow.png"}
                 width="12"
                 height="22"
-                alt="Nav Icon"
+                alt=" "
               />
             </button>
           )}
@@ -104,7 +104,7 @@ export default class ListingGallery extends Component {
                 src={"./assets/left-arrow.png"}
                 width="12"
                 height="22"
-                alt="Nav Icon"
+                alt=" "
               />
             </button>
           )}
@@ -131,9 +131,12 @@ class NFTGallery extends Component {
     const settings = {
       customPaging: function (i) {
         return (
-          <a>
-            <img src={`./assets/NFT_Market_item0${i + 1}.png`} alt="Image Container for Thumbnail Images" />
-          </a>
+          <button>
+            <img
+              src={`./assets/NFT_Market_item0${i + 1}.png`}
+              alt="Container for Thumbnails"
+            />
+          </button>
         );
       },
       dots: true,
@@ -164,16 +167,11 @@ const NFTItem = () => {
   return (
     <div className="listing-copy">
       <Link className="share-link" exact to="/">
-        <img
-          src="./assets/share.png"
-          width="12"
-          height="12"
-          alt=""
-        />
+        <img src="./assets/share.png" width="12" height="12" alt="" />
         SHARE
       </Link>
       <header>
-        <p class="listing-date">May 16 2021</p>
+        <p className="listing-date">May 16 2021</p>
         <h2>GANG HO DONG</h2>
         <p>Zombie Apocalypse</p>
       </header>

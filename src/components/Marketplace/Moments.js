@@ -148,7 +148,9 @@ export default class Moments extends Component {
       <div className="hot-moments">
         <header>
           <h3> WHATS HOT </h3>
-          <Link exact to="/">Explore Marketplace</Link>
+          <Link exact to="/">
+            Explore Marketplace
+          </Link>
         </header>
         <Slider {...settings}>
           {item.map(
@@ -171,7 +173,11 @@ export default class Moments extends Component {
                   <div className="item-copy">
                     <img src={hot} alt="" width="50" height="19" />
                     <p className="item-name">{name}</p>
-                    <p className="item-desc">{desc}<br />{series}</p>
+                    <p className="item-desc">
+                      {desc}
+                      <br />
+                      {series}
+                    </p>
                     <p>
                       {rarity}
                       <span>LE</span>

@@ -1,92 +1,419 @@
+.next,
+.prev {
+    &::after {
+        content: '';
+        height: 1px;
+        background-color: white;
+        margin: 0;
+        width: 100%;
+        bottom: 2rem;
+        position: absolute;
+        left: 0;
+    }
+}
+
 .marketplace {
     background-color: #000000;
-    padding: 3rem 10rem;
+    padding: 0rem 10rem;
+
+    .button {
+        position: absolute;
+        transform: translateY(500%);
+        z-index: 5;
+        border: none;
+        background: none;
+        color: white;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            padding: 0;
+            margin: 0;
+        }
+
+        &.prev {
+            left: 10%;
+            transform: rotate(-90deg) translate(500%);
+
+            img {
+                transform: rotate(90deg);
+                padding: 0;
+            }
+        }
+
+        &.next {
+            right: 10%;
+            transform: rotate(90deg) translate(-850%);
+
+            img {
+                transform: rotate(90deg);
+                padding: 0;
+            }
+        }
+
+
+    }
 
     .listing {
         position: relative;
-        .slick-dots,
-        .slick-thumb {
-            top: 0;
-            width: 200px;
-            left: -10rem;
-            transform: translateX(-50%);
-            position: absolute;
-            li {
-                max-width: 100px;
-                margin: 3rem ;
-                list-style: none;
 
-                a{
-                    img {
-                    max-width: 90px;
-                }
-            }
-            }
-
-        }
-        .active-image {
-            position: relative;
-            left: 15rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            top: 0;
-            div {
-                padding-top: 1rem 0;
-                display: flex;
-                img{
-                    justify-self: center;
-                    margin-top: 5rem;
-                }
-            }
-        }
         .listing-copy {
             display: flex;
             flex-direction: column;
             position: absolute;
-            margin: 0;
-            right: 10rem;
-            top: 150px;
+            right: 15rem;
+            bottom: 80px;
+            z-index: 5;
+
+            .share-link {
+                font-size: 00.63rem;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: black;
+                width: 25%;
+                justify-content: center;
+                padding: 0.5rem 1rem;
+                border-radius: 2px;
+                position: absolute;
+                right: -100px;
+                top: -50px;
+
+                img {
+                    margin-right: 0.5rem;
+                }
+            }
+
+            header {
+                margin-top: 1rem;
+
+                .listing-date {
+                    transform: rotate(-90deg);
+                    position: absolute;
+                    font-size: 0.6rem;
+                    left: -65px;
+                    top: 30px;
+
+                    &::after {
+                        content: '';
+                        height: 1px;
+                        background-color: white;
+                        margin: 0;
+                        width: 100%;
+                        bottom: -0.5rem;
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                p {
+                    margin-top: 10px;
+                }
+            }
+
+            .listing-status {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h4 {
+                    &:first-child {
+                        margin: 1.5rem 0 0;
+                    }
+
+                    &:last-child {
+                        margin-top: 0.3rem;
+                        margin-bottom: 8rem;
+                    }
+                }
+            }
+
+            footer {
+                display: flex;
+                flex-direction: column;
+
+                .explore-btn {
+                    font-size: 0.63rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    background-color: #325eff;
+                    padding: 0.5rem 1.25rem;
+                    border-radius: 2px;
+                    width: 75%;
+                    font-weight: bold;
+                }
+
+                small {
+                    font-size: 0.63rem;
+                    font-weight: bold;
+                    display: inline-block;
+                    margin-bottom: 1rem;
+                }
+            }
         }
-    }
 
-    .listing-copy {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin: 0;
-        right: 10rem;
-        bottom: 100px;
-    }
+        .slick-dots,
+        .slick-thumb {
+            top: 60px;
+            width: 200px;
+            left: -10rem;
+            position: absolute;
 
-    .listing-gallery {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        margin: 0;
-        left: 5rem;
+            li {
+                max-width: 50px;
+                margin: 0rem 3rem;
+                list-style: none;
+
+                button {
+                    img {
+                        max-width: 90px;
+                    }
+                }
+            }
+        }
 
         .active-image {
             position: relative;
-            right: 60% !important;
-            justify-content: center;
-            align-items: center;
-            top: 15%;
-        }
+            left: 15rem;
+            margin-bottom: 0rem;
+            text-align: center;
+            top: 0;
 
-        .thumbnails {
-            cursor: pointer;
-        }
+            div {
+                padding-top: 1rem 0;
+                display: flex;
 
-        .img {
-            width: 100%;
-            height: 100%;
-
-        }
-
-        .photo {
-            width: 400px;
-            height: 450px;
+                img {
+                    justify-self: center;
+                    margin: 5rem 4rem 3rem;
+                }
+            }
         }
     }
 
+    .hot-moments {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+
+            a {
+                font-size: 0.63rem;
+                position: relative;
+                text-transform: uppercase;
+
+                &::after {
+                    content: '';
+                    height: 1px;
+                    background-color: white;
+                    margin: 0;
+                    width: 100%;
+                    bottom: -0.4rem;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            border: 3px solid #212127;
+            max-width: 300px;
+            font-size: 0.63rem;
+            justify-content: center;
+            align-items: center;
+            margin: 0 1rem;
+
+            .hot-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+
+                img {
+                    display: inline-block;
+                }
+
+                .item-copy {
+                    p {
+                        span {
+                            display: inline-block;
+                            border: 1px solid white;
+                            border-radius: 10px;
+                            padding: 2px;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0 5px;
+                        }
+                    }
+
+                    .item-name {
+                        text-transform: uppercase;
+                    }
+
+                    .item-desc {
+                        margin-bottom: 0;
+                        line-height: 1.5;
+                    }
+                }
+            }
+
+            footer {
+                display: flex;
+                background-color: #212127;
+                justify-content: space-between;
+                padding: 0.5rem;
+
+                div {
+                    &:first-child {
+                        text-align: left;
+                    }
+
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    .producers {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.63rem;
+        margin: 1rem 3rem 3rem;
+
+        h3 {
+            margin-bottom: 2rem;
+            margin-left: -3rem;
+        }
+
+        .producer-profiles {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 70px;
+            text-align: center;
+            margin: 0 3rem;
+
+            .producer-name {
+                margin: 0.7rem 0 0;
+            }
+
+            .user-status {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+
+                img {
+                    margin-left: 0.5rem;
+                }
+            }
+
+            small {
+                margin: 0;
+            }
+        }
+    }
+
+    hr {
+        opacity: 0.2;
+        margin-bottom: 7rem;
+    }
+
+    .spotlight-nft {
+        position: relative;
+
+        h3 {
+            position: absolute;
+            left: -20px;
+            bottom: 175px;
+            transform: rotate(-90deg);
+
+            &::after {
+                content: url('./site_deco_stripes.png');
+                position: absolute;
+                transform: rotate(-90deg) scale(0.45);
+                left: 320px;
+                bottom: -250px;
+            }
+        }
+
+        .nft-card {
+            display: flex !important;
+            flex-direction: row;
+            margin: 0 0 7rem 20rem;
+            position: relative;
+
+            .nft-image {
+                &::before {
+                    content: url('./NFT_sublogo.png');
+                    position: absolute;
+                    transform: scale(0.4);
+                    left: 15rem;
+                    top: -2.5rem;
+                }
+
+                &::after {
+                    content: url('./site_deco_arrows.png');
+                    position: absolute;
+                    transform: scale(0.4);
+                    left: 20rem;
+                }
+            }
+
+            .nft-copy {
+                margin: 2rem 0 0 11rem;
+                position: relative;
+
+                &::before {
+                    content: url('./NFT_Market.png');
+                    position: absolute;
+                    right: -5rem;
+                    top: -2rem;
+                    transform: scale(0.7);
+                    opacity: 0.6;
+                }
+
+                img {
+                    margin: 1rem 0;
+                }
+
+                h2 {
+                    font-family: 'monument_extreg';
+                    max-width: 18rem;
+                    line-height: 1.2;
+                }
+
+                p {
+                    font-size: 0.63rem;
+                }
+
+                .spotlight-explore {
+                    display: inline-block;
+                    margin-top: 1rem;
+                    font-size: 0.63rem;
+                    border: 1px solid white;
+                    padding: 0.75rem 2rem;
+                }
+            }
+        }
+    }
 }
