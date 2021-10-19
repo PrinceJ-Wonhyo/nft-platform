@@ -147,7 +147,7 @@ export default class Moments extends Component {
     return (
       <div className="hot-moments">
         <header>
-          <h2> What's Hot </h2>
+          <h3> WHATS HOT </h3>
           <Link exact to="/">Explore Marketplace</Link>
         </header>
         <Slider {...settings}>

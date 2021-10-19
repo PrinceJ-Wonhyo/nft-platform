@@ -2,6 +2,7 @@ import ListingGallery from "./ListingGallery";
 import Moments from "./Moments";
 import Producers from "./Producers";
 import React from "react";
+import Spotlight from "./Spotlight";
 import classNames from "classnames/bind";
 import styles from "./_marketplace.scss";
 
@@ -16,6 +17,7 @@ export default function Marketplace() {
         <Producers />
       </section>
       <hr />
+      <Spotlight />
     </div>
   );
 }
