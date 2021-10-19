@@ -91,22 +91,25 @@ export default class Producers extends Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 9,
       slidesToScroll: 3,
     };
     return (
-      <div>
+      <div className="producers">
+        <h3>CERTIFIED PRODUCERS</h3>
         <Slider {...settings}>
           {producers.map(({ profileImg, name, user, verified, rating, id }) => (
+            <Link exact to="/">
             <div className="producer-profiles" key={id}>
-              <img src={profileImg} alt="" width="74" height="74" />
-              <p>{name}</p>
-              <p>
-                {user}
-                <img src={verified} />
-              </p>
+              <img src={profileImg} alt="" width="56" height="56" />
+              <p className="producer-name">{name}</p>
+              <div className="user-status">
+              <p>{user}</p>
+              <img src={verified} alt="" width="12" height="12"/>
+              </div>
               <small>Credit {rating}</small>
-            </div>
+              </div>
+              </Link>
           ))}
         </Slider>
       </div>
